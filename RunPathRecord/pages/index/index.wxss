@@ -1,0 +1,61 @@
+/**index.wxss**/
+page{
+    height: 100%;
+}
+map{
+    margin: 5px 0 0 25rpx;
+    width: 700rpx;
+    height: 83%;
+}
+
+.begin-view{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2% 0 0 25rpx;
+    width: 700rpx;
+    height: 14%;
+}
+.btn-view{
+    display: flex;
+    align-items: center;
+    width: 300rpx;
+    height: 65px;
+    border-radius: 23px;
+    background: #FCFFF7;
+    box-shadow:  5px 5px 9px #eaede6,
+             -5px -5px 9px #ffffff;
+}
+.btn-view text{
+    margin-left: 20rpx;
+    font-size: 16px;
+    color: #3F3E47;
+}
+.btn-view image{
+    margin-left: 25rpx;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.start-view{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 700rpx;
+    height: 14%;
+}
+.start-view text{
+    font-size: 15px;
+    color: #3F3E47;
+}
+.start-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.start-endimg{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}

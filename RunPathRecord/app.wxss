@@ -1,0 +1,37 @@
+/**app.wxss**/
+page{
+    background-color: #FCFFF7;
+}
+.babypowder{
+    color: #FCFFF7;
+}
+.babypowder-bc{
+    background-color: #FCFFF7;
+}
+.flame{
+    color: #E53D00;
+}
+.flame-bc{
+    background-color: #E53D00;
+}
+.middleyellow{
+    color: #FFE900;
+}
+.middleyellow-bc{
+    background-color: #FFE900;
+}
+.viridiangreen{
+    color: #21A0A0;
+}
+.viridiangreen-bc{
+    background-color: #21A0A0;
+}
+.skobeloff{
+    color: #046865;
+}
+.skobeloff-bc{
+    background-color: #046865;
+}
+.text-color{
+    color: #3f3e47;
+}

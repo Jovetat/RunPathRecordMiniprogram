@@ -1,0 +1,46 @@
+<!--pages/list/list.wxml-->
+<view class="userinfo middleyellow-bc">
+    <block wx:if="{{!hasUserInfo}}">
+        <image class="userinfo-avatar" src="/image/icon/logo_icon.png" mode="cover"></image>
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="userinfo-btn text-color" style="width:250rpx">点击登录</button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class="babypowder-bc userinfo-view">
+            <text class="userinfo-nickname text-color">{{userInfo.nickName}}</text>
+            <view class="sync-view">
+                <image src="/image/icon/download_btn.png" bindtap="downLoadData"></image>
+                <image src="/image/icon/upload_btn.png" bindtap="upLoadData"></image>
+            </view>            
+        </view>
+    </block>
+</view>
+
+<view class="sort-view">
+    <picker range='{{sort_mode}}' range-key='name' value='{{sort_index}}' bindchange="listSortBindtap">
+        <view class="babypowder">排序方式：{{sort_mode[sort_index].name}}</view>
+    </picker>
+</view>
+
+<view class="list-view">
+    <view wx:for="{{polyline}}" wx:key="start_time" class="item-view">
+        <view class="infor-view">
+            <text class="text-color">{{item.list_time}}</text>
+            <text class="text-color">{{item.trip}}m</text>
+            <text class="text-color">{{item.timing}}s</text>
+        </view>
+        <view data-id="{{item.start_time}}" bindtap="showPathRecord" class="btn-view">
+            <image src="../../image/icon/record_icon.png"></image>
+            <text class="text-color">展示路径</text>
+        </view>
+        <view data-id="{{item.start_time}}" bindtap="deletePathData" class="btn-view">
+            <image src="../../image/icon/delete_icon.png"></image>
+            <text class="text-color">删除路径</text>
+        </view>        
+        <view wx:if="{{item.isShow}}" class="map-view" animation='{{viewAni}}'>
+            <map id="pathmap" name="pathmap" latitude="{{maplatitude}}" longitude="{{maplongitde}}" polyline="{{dynamic_pol}}"
+                markers="{{markers}}" setting="{{mapSetting}}"></map>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<map name="pathmap" latitude="{{maplatitude}}" longitude="{{maplongitde}}" polyline="{{polyline}}"
+    show-location="true" show-compass="true" setting="{{mapSetting}}" enable-rotate="true"></map>
+
+<!-- 动态俯视出问题 -->
+<view class="begin-view">
+    <block wx:if="{{isrunning}}">
+        <view class="start-view">
+            <!-- img 速度 里程 持续时间 -->
+            <image src="/image/icon/distance_show.png" class="start-img"></image>
+            <text>{{nowTrip}}m</text>
+            <image src="/image/icon/time_show.png" class="start-img"></image>
+            <text>{{timing}}s</text>
+            <image src="/image/icon/speedmeter.png" class="start-img"></image>
+            <text>{{speed}}m/s</text>
+            <image bindtap="endRunBindtap" src="/image/icon/end_btn.png" class="start-endimg"></image>     
+            <text bindtap="endRunBindtap">结束</text>
+        </view>        
+    </block>
+    <block wx:else>
+        <view class="btn-view" bindtap="startRunBindtap" data-isTarget="false">
+            <image src="/image/icon/start_btn.png" data-isTarget="false"></image>
+            <text data-isTarget="false">随心模式</text>
+        </view>
+        <view class="btn-view" bindtap="startRunBindtap" data-isTarget="true">
+            <image src="/image/icon/target.png" data-isTarget="true"></image>
+            <text data-isTarget="true">目标模式</text>
+        </view>        
+    </block>
+</view>

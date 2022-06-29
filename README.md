@@ -1,1 +1,7 @@
-# RunPathRecordMiniprogram
+# 路径记录及回溯微信小程序(JavaScript)
+————————————————————————————————————————————————
+### 基本功能
+#### 跑步路径记录、到达设定目标自动结束的目标模式、跑步信息列表、跑步路径回溯、本地及服务器存储、列表排序、用户登录
+	通过polyline记录路径数据，每隔固定距离后增加点
+	后端 node ，根据用户名存储对应 json 数据
+### b站演示视频：https://www.bilibili.com/video/BV13Y4y137hy/?vd_source=77eb480381d116a2bf5220b6fbcb8b31
